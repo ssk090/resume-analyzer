@@ -1,4 +1,4 @@
-# Resume Analyzer (Resumate)
+# Resume Analyzer (Resumate) 🤖
 
 Resumate is a modern web application for analyzing and improving your resume using AI. Upload your resume, get instant feedback, and track your application ratings. Built with React Router, TypeScript, TailwindCSS, and Puter.js for authentication, file management, and AI feedback.
 
