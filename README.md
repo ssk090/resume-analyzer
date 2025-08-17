@@ -1,38 +1,41 @@
-# Welcome to React Router!
+# Resume Analyzer (Resumate)
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Resumate is a modern web application for analyzing and improving your resume using AI. Upload your resume, get instant feedback, and track your application ratings. Built with React Router, TypeScript, TailwindCSS, and Puter.js for authentication, file management, and AI feedback.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
+- 📝 Upload and analyze resumes
+- 🤖 AI-powered feedback and scoring (ATS, content, style, skills, structure)
+- 📊 Track application ratings and feedback history
+- 🔒 Authentication via Puter.js
+- 🚀 Server-side rendering (SSR) with React Router
+- 🎨 Modern UI with TailwindCSS
+- ⚡ Hot Module Replacement (HMR)
 - 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
 
 ## Getting Started
 
 ### Installation
 
-Install the dependencies:
+Install dependencies:
 
 ```bash
 npm install
+# or
+pnpm install
 ```
 
 ### Development
 
-Start the development server with HMR:
+Start the development server:
 
 ```bash
 npm run dev
+# or
+pnpm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Building for Production
 
@@ -40,48 +43,55 @@ Create a production build:
 
 ```bash
 npm run build
+# or
+pnpm run build
 ```
 
 ## Deployment
 
-### Docker Deployment
+### Docker
 
-To build and run using Docker:
+Build and run with Docker:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+docker build -t resume-analyzer .
+docker run -p 3000:3000 resume-analyzer
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+### Manual Deployment
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+Deploy the output of `npm run build` (or `pnpm run build`) to your preferred Node hosting platform.
 
-### DIY Deployment
+## Environment & Configuration
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+- Uses [Puter.js](https://puter.com/) for authentication, file storage, and AI feedback
+- Configure SSR/SPA mode in `react-router.config.ts`
+- Vite and TailwindCSS for fast development and styling
 
-Make sure to deploy the output of `npm run build`
+## File Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+├── app/
+│   ├── components/        # UI components (Navbar, ResumeCard, ScoreCircle)
+│   ├── lib/               # Puter.js integration
+│   ├── routes/            # Route files (auth, home, constants)
+│   ├── app.css            # Global styles
+│   └── root.tsx           # App entry
+├── public/                # Static assets (images, icons)
+├── types/                 # TypeScript types
+├── package.json           # Project metadata and scripts
+├── Dockerfile             # Docker setup
+├── vite.config.ts         # Vite configuration
+├── tsconfig.json          # TypeScript configuration
 ```
 
-## Styling
+## Contributing
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Pull requests and issues are welcome!
+
+## License
+
+MIT
 
 ---
-
-Built with ❤️ using React Router.
+Built with ❤️ using React Router, Vite, and Puter.js.
