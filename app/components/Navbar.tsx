@@ -7,7 +7,7 @@ const Navbar = () => {
         <p className="text-2xl font-bold uppercase">Resumate 🤖</p>
       </Link>
       <Link to="/upload">
-        <p className="primary-button">Upload Resume</p>
+        <p className="primary-button">Upload Resume 📁</p>
       </Link>
     </nav>
   );
